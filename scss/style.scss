@@ -2,62 +2,57 @@
 	box-sizing: border-box;
 }
 
+@import 'simple-grid.css';
+
 .header {
 	background-image: url("../images/bg.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding-top: 44px;
-}
-
-.header {
-	&__logo--image {
-		width: 100%;
-		margin: 0 auto;
+	padding-bottom: 83px;
+	
+	&__logo-akad {
+        display: inline-block;
+        cursor: pointer;
+        opacity: .5;
+         &:hover {
+         	opacity: .9;
+         }	
 	}
 
-	&__heading--one {
+	&__logo-lines {
+        margin-left: calc(100% - 93px);	
+        display: inline-block;
+        cursor: pointer;
+        opacity: .5;
+         &:hover {
+         	opacity: .9;
+         }   
+	}
+
+	&__heading-one {
 		text-align: center;
 		text-transform: uppercase;
 		color: #60606e;
 		padding-top: 102.5px;
-		padding-bottom: 0;
 		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 
-	&__heading--six{
+	&__heading-six{
 		text-align: center;
 		text-transform: uppercase;
 		color: #60606e;
-		padding-bottom: 83.5px;
+		margin-top: 15px;
 		padding-top: 0;
-		margin-top: 0;
+		padding-bottom: 83.5px;
 	}
 }
 
-
-
-.aside {
-	&__section-one {
-		width: 1075px;
-		margin: 0 auto;
-	}
-
-	&__section-one-box-one {
-		width: 520px;
-		display: inline-block;
-		margin-right: 15px;
-		margin-top: 75px;
-	}
-
-	&__section-one-box-two {
-		width: 520px;
-		display: inline-block;
-		margin-left: 15px;
-		margin-top: 75px;
-	}
-
-	&__section-one--heading-two {
+.section-one{
+	&__heading-two {
 		font-size: 30px;
+		margin-top: 70.5px;
 		margin-bottom: 0;
 		color: #60606e;
 		text-transform: uppercase;
@@ -66,7 +61,7 @@
 		background-position: 0% 90%;
 	}
 
-	&__section-one--heading-six {
+	&__heading-six {
 		font-size: 14px;
 		margin-top: 10.5px;
 		margin-bottom: 15px;
@@ -74,18 +69,15 @@
 		text-transform: uppercase;
 	}
 
-	&__section-one-paragraph {
+	&__paragraph {
 		font-size: 14px;
 		text-align: left;
 		color: #60606e;
 	}
+}
 
-	&__section-two {
-		width: 650px;
-		margin: 0 auto;
-	}
-
-	&__section-two--heading-two {
+.section-two {
+	&__heading-two {
 		font-size: 30px;
 		text-align: center;
 		margin-top: 83.5px;
@@ -97,55 +89,46 @@
 		background-position: 37% 90%;
 	}
 
-	&__section-two--paragraph {
+	&__paragraph {
 		font-size: 14px;
 		color: #60606e;
 		text-align: center;
+		margin-bottom: 50px;
 	}
+}
 
-    &__section-three{
-    	width: 1075px;
-    }
-    
-    &__section-three--box {
-    	width: 356px;
+.section-three {
+	 &__small-picture {
+	 	vertical-align: top;
     	display: inline-block;
-    	padding-right: 15px;
-    	padding-left: 15px;
-    	margin-top: 50px;
     }
 
-    &__section-three--label {
+    &__heading-four {
     	font-size: 20px;
-    	font-weight: bold;
     	text-transform: uppercase;
-		line-height: 40px;
+    	margin-top: 0;
+    	vertical-align: bottom;
 		padding-left:5px;
-		vertical-align: top;
+		display: inline-block;
+		padding-bottom: 0;
+		margin-bottom: 6px;
     }
 
-    &__section-three-paragraph {
+    &__paragraph {
     	font-size: 14px;
 		color: #60606e;
 		text-align: left;
+		padding-top: 0;
+		margin-top: 6px;
     }
 }
 
-.main {
-	&__description {
-		margin: 0 auto;
-	}
-
-    &__description {
-    	width: 650px;
-		margin: 0 auto;
-    }
-
-	&__heading {
+.section-four {
+	&__heading-two {
 		font-size: 30px;
 		text-align: center;
-		margin-top: 85px;
-		margin-bottom: 0;
+		margin-top: 75.5px;
+		margin-bottom: 10px;
 		color: #60606e;
 		text-transform: uppercase;
 		background-image: url(../images/green.png);
@@ -157,31 +140,28 @@
 		font-size: 14px;
 		color: #60606e;
 		text-align: center;
-		padding-bottom: 50px;
+		margin-bottom: 50.1px;
 	}
-    
-    &__img-grid {
-    	padding-bottom: 15px;
-    }
+}
 
-    &__img-grid-image {
-    	width: 265px;
-    	padding-right: 10px;
-    	padding-left: 10px;
-    	padding-top: 10px;
+.section-five {
+	&__images {
+    	width: 100%;
+    	padding-right: 0;
+    	padding-left: 0;
     }
 }
 
 .footer {
+	margin-top: 15px;
 	background-color: #7beec7;
+	
 	&__first-box {
 		width: 500px;
-		vertical-align: top;
-		display: inline-block;
 		margin-top: 14px;
 	}
 
-	&__first-box-headig-three {
+	&__first-box-heading {
 		text-align: left;
 		text-transform: uppercase;
 		color: #ffffff;
@@ -207,12 +187,10 @@
 		width: 539px;
 		margin-top: 45px;
 		margin-bottom: 48px;
-		vertical-align: top;
 		background-color: #ffffff;
-		display: inline-block;
 	}
 
-	&__second-box-heading-three {
+	&__second-box-heading {
 		margin: 0;
 		font-size: 26px;
 		padding: 20px;
@@ -234,7 +212,7 @@
     	padding: 20px;
     }
 
-	&__second-box-input {
+	&__second-box-email {
 		width: 350px;
 		height: 50px;
 		color: #60606e;
@@ -244,7 +222,7 @@
 		outline: none; 
 	}
 
-	&__second-box-label {
+	&__second-box-button {
 		width: 140px;
 		height: 50px;
 		color: #ffffff;
